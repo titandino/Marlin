@@ -20,8 +20,8 @@
  *
  */
 #pragma once
-#error "Don't build with import-2.1.x configurations!"
-#error "Use the 'bugfix...' or 'release...' configurations matching your Marlin version."
+
+#define CONFIG_EXAMPLES_DIR "Creality/Ender-3 V2 Neo"
 
 /**
  * Configuration.h
@@ -128,7 +128,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "E3-V2 Neo V1.0"
+#define CUSTOM_MACHINE_NAME "E3V2Neo v1.0"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -636,14 +636,14 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 320
-#define HEATER_1_MAXTEMP 320
-#define HEATER_2_MAXTEMP 320
-#define HEATER_3_MAXTEMP 320
-#define HEATER_4_MAXTEMP 320
-#define HEATER_5_MAXTEMP 320
-#define HEATER_6_MAXTEMP 320
-#define HEATER_7_MAXTEMP 320
+#define HEATER_0_MAXTEMP 300
+#define HEATER_1_MAXTEMP 300
+#define HEATER_2_MAXTEMP 300
+#define HEATER_3_MAXTEMP 300
+#define HEATER_4_MAXTEMP 300
+#define HEATER_5_MAXTEMP 300
+#define HEATER_6_MAXTEMP 300
+#define HEATER_7_MAXTEMP 300
 #define BED_MAXTEMP      120
 #define CHAMBER_MAXTEMP  60
 
@@ -688,9 +688,9 @@
     #define DEFAULT_Ki_LIST {   2.62,   2.62 }
     #define DEFAULT_Kd_LIST {  78.81,  78.81 }
   #else
-    #define DEFAULT_Kp  27.91
-    #define DEFAULT_Ki   3.25
-    #define DEFAULT_Kd  59.74
+    #define DEFAULT_Kp  24.55
+    #define DEFAULT_Ki   2.56
+    #define DEFAULT_Kd  58.91
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1568,7 +1568,7 @@
 #define PROBING_MARGIN 20
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (133*60)
+#define XY_PROBE_FEEDRATE (50*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_FEEDRATE_FAST (4*60)
@@ -1731,14 +1731,14 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
-#define INVERT_E1_DIR false
-#define INVERT_E2_DIR false
-#define INVERT_E3_DIR false
-#define INVERT_E4_DIR false
-#define INVERT_E5_DIR false
-#define INVERT_E6_DIR false
-#define INVERT_E7_DIR false
+#define INVERT_E0_DIR true
+#define INVERT_E1_DIR true
+#define INVERT_E2_DIR true
+#define INVERT_E3_DIR true
+#define INVERT_E4_DIR true
+#define INVERT_E5_DIR true
+#define INVERT_E6_DIR true
+#define INVERT_E7_DIR true
 
 // @section homing
 
@@ -3362,9 +3362,9 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-#define DWIN_CREALITY_LCD             // Creality UI
+//#define DWIN_CREALITY_LCD             // Creality UI
 //#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
-//#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
+#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
 
