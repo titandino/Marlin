@@ -2283,13 +2283,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-<<<<<<< HEAD
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE - 10) / 2)    // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE - 10) / 2)    // Y point for Z homing
-=======
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
->>>>>>> 4a9e102c2ef96b75378195ad3b89cb1646ac4df4
   //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 
@@ -3400,11 +3395,7 @@
 
   //#define TFT_SHARED_IO   // I/O is shared between TFT display and other devices. Disable async data transfer.
 
-<<<<<<< HEAD
-  #define COMPACT_MARLIN_BOOT_LOGO  // Use compressed data to save Flash space.
-=======
   #define COMPACT_MARLIN_BOOT_LOGO  // Use compressed data to save Flash space
->>>>>>> 4a9e102c2ef96b75378195ad3b89cb1646ac4df4
 #endif
 
 #if ENABLED(TFT_LVGL_UI)
